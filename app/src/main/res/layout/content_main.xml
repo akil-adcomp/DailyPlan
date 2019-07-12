@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/swipeRefreshLayout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/app_bar_main">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rlLayout">
+            <com.arlib.floatingsearchview.FloatingSearchView
+                android:id="@+id/floating_search_view"
+                android:layout_weight="0.2"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_gravity="top"
+                android:background="@color/transparent"
+                android:visibility="visible"
+                app:floatingSearch_close_search_on_keyboard_dismiss="true"
+                app:floatingSearch_leftActionMode="showHamburger"
+                app:floatingSearch_searchBarMarginLeft="5dp"
+                app:floatingSearch_searchBarMarginRight="5dp"
+                app:floatingSearch_searchBarMarginTop="0dp"
+                app:floatingSearch_searchHint="Search"
+                app:floatingSearch_showSearchKey="true"
+                app:floatingSearch_suggestionsListAnimDuration="250"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:padding="5dp"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="5dp"
+                android:clickable="true"
+                android:id="@+id/userSelect"
+                android:background="?android:attr/selectableItemBackground">
+                <RelativeLayout
+                    android:layout_width="@dimen/height_35"
+                    android:layout_height="@dimen/height_35"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/initialsBackgroundColor"
+                    android:background="@drawable/circle_shape"/>
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="A"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@+id/initialsDataText"
+                    android:gravity="center"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="10dp"
+        android:visibility="visible"
+        android:layout_below="@+id/rlLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    </RelativeLayout>
+
+</android.support.v4.widget.SwipeRefreshLayout>

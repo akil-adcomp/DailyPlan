@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B40602</color>
+    <color name="colorPrimaryDark">#8B0600</color>
+    <color name="colorAccent">#dd2c00</color>
+    <color name="white">#ffffff</color>
+    <color name="lightBlack">#84bcbaba</color>
+    <color name="orange">#dd2c00</color>
+    <color name="lightText">#272727</color>
+    <color name="backgroundDefault">#dedede</color>
+    <color name="backgroundDialogSelection">#7EDEDEDE</color>
+    <color name="orangeDark">#c12600</color>
+    <color name="backgroundChip">#E1008577</color>
+    <color name="transparentColor">#00DD2C00</color>
+    <color name="lightText2">#8F8F8F</color>
+    <color name="darkText">#3D3D3D</color>
+
+    <color name="redDark">#A72200</color>
+    <color name="greenDark">#3B8F00</color>
+    <color name="blueDark">#0059A7</color>
+    <color name="yellowDark">#A74E00</color>
+    <color name="blueDarkDark">#2D00A7</color>
+    <color name="purpleDark">#5E0174</color>
+    <color name="greenDarkDark">#646001</color>
+
+
+
+
+
+
+
+</resources>

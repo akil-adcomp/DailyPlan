@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<android.support.v4.widget.DrawerLayout
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="end">
+    <include
+        layout="@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer" />
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view_end"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:fitsSystemWindows="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="10dp"
+            android:paddingTop="25dp"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:id="@+id/lnLayout4"
+            android:background="@drawable/bottom_border_line_sub_category">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_35"
+                android:layout_centerInParent="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:clickable="true"
+                android:id="@+id/userSelect"
+                android:background="?android:attr/selectableItemBackground">
+                <RelativeLayout
+                    android:layout_width="@dimen/height_35"
+                    android:layout_height="@dimen/height_35"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/initialsBackgroundColorDrawer"
+                    android:background="@drawable/circle_shape"/>
+                <TextView
+                    android:layout_width="@dimen/height_35"
+                    android:layout_height="@dimen/height_35"
+                    android:scaleType="centerInside"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:text="A"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@+id/initialsDataDrawer"
+                    android:gravity="center"/>
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/nav_header_vertical_spacing"
+                android:textColor="@color/darkText"
+                android:id="@+id/userNameTextDrawer"
+                android:text="Anonymous"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textStyle="normal"
+                />
+
+
+
+        </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerviewUserList"
+                android:layout_marginTop="10dp"
+                android:visibility="visible"
+                android:layout_below="@+id/lnLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+        </RelativeLayout>
+
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>
+
+    <!--<android.support.v4.widget.DrawerLayout-->
+        <!--android:id="@+id/drawer_layout_end"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:fitsSystemWindows="true"-->
+        <!--tools:openDrawer="end">-->
+        <!--&lt;!&ndash;<include&ndash;&gt;-->
+            <!--&lt;!&ndash;layout="@layout/app_bar_main"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent" />&ndash;&gt;-->
+
+
+
+
+    <!--</android.support.v4.widget.DrawerLayout>-->
+</RelativeLayout>

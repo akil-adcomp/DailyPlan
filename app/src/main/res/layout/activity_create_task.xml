@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundDefault"
+    tools:context=".CreateTaskActivity">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="3dp"
+            app:cardCornerRadius="3dp"
+            app:contentPadding="3dp"
+            android:layout_margin="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Create new Task"
+                    android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:padding="5dp"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical">
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45"
+                            android:hint="Task Description"
+                            android:id="@+id/taskName"
+                            android:alpha="0.8"
+                            android:inputType="textCapSentences"
+                            android:drawableLeft="@drawable/ic_create_task"
+                            android:drawablePadding="10dp"
+                            android:textColor="@color/lightText"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45"
+                            android:hint="Project Name"
+                            android:id="@+id/projectName"
+                            android:alpha="0.8"
+                            android:inputType="textCapWords"
+                            android:drawableLeft="@drawable/ic_project_name"
+                            android:drawablePadding="10dp"
+                            android:textColor="@color/lightText"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45"
+                            android:hint="Assign To"
+                            android:id="@+id/assignTo"
+                            android:inputType="textCapWords"
+                            android:alpha="0.8"
+                            android:drawableLeft="@drawable/ic_assigned_user"
+                            android:drawablePadding="10dp"
+                            android:textColor="@color/lightText"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45"
+                            android:hint="Start Date"
+                            android:id="@+id/startDate"
+                            android:clickable="true"
+                            android:alpha="0.8"
+                            android:focusable="false"
+                            android:textColor="@color/lightText"
+                            android:drawableLeft="@drawable/ic_start_date"
+                            android:drawablePadding="10dp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                    </android.support.design.widget.TextInputLayout>
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/height_45"
+                            android:hint="End Date"
+                            android:alpha="0.8"
+                            android:id="@+id/endDate"
+                            android:textColor="@color/lightText"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:drawableLeft="@drawable/ic_start_date"
+                            android:drawablePadding="10dp"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                </LinearLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Comments"
+                        android:id="@+id/comments"
+                        android:alpha="0.8"
+                        android:singleLine="false"
+                        android:minLines="3"
+                        android:maxLines="4"
+                        android:textColor="@color/lightText"
+                        android:drawableLeft="@drawable/ic_comments"
+                        android:drawablePadding="10dp"
+                        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"/>
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="Cancel"
+                        android:layout_weight="1"
+                        android:layout_margin="5dp"
+                        android:id="@+id/cancel"
+                        android:background="@color/white"
+                        android:textColor="@color/colorPrimaryDark"/>
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Create"
+                        android:layout_margin="5dp"
+                        android:id="@+id/createTask"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/white"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+   </ScrollView>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:visibility="visible"
+        android:background="@color/colorPrimary"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

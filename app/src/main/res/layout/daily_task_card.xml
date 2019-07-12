@@ -1,0 +1,192 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:filterTouchesWhenObscured="true"
+    android:background="@drawable/top_border_line_sub_category">
+
+    <TextView
+        android:gravity="end"
+        android:id="@+id/startDate"
+        android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+        android:layout_width="match_parent"
+        android:textSize="9sp"
+        android:padding="5dp"
+        android:layout_height="wrap_content"/>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/lnLayout"
+        android:background="?attr/selectableItemBackground"
+        android:padding="5dp">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_36"
+            android:id="@+id/userSelect"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            >
+            <RelativeLayout
+                android:layout_width="@dimen/height_36"
+                android:layout_height="@dimen/height_36"
+                android:layout_centerInParent="true"
+                android:id="@+id/initialsBackgroundColor"
+                android:background="@drawable/circle_shape"/>
+            <TextView
+                android:layout_width="@dimen/height_35"
+                android:layout_height="@dimen/height_35"
+                android:scaleType="centerInside"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:text="A"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+                android:textColor="@color/cardview_light_background"
+                android:id="@+id/initialsData"
+                android:gravity="center"/>
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="10dp"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/projectName"
+                    android:layout_weight="1"
+                    android:textColor="@color/cardview_dark_background"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:maxLines="2" />
+
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/taskName"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/lightText"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <TextView
+                android:id="@+id/assignTo"
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                />
+
+            <!--<TextView-->
+                <!--android:layout_weight="1"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Comments : "-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+                <!--/>-->
+            <!--<TextView-->
+                <!--android:id="@+id/comments"-->
+                <!--android:layout_weight="1"-->
+                <!--android:text="5/54,Shatataraka CHS,Akashganga Colon,Thane"-->
+                <!--android:textAppearance="@style/TextAppearance.AppCompat.Caption"-->
+                <!--android:textStyle="italic"-->
+                <!--android:maxLines="8"-->
+                <!--android:textColor="@color/lightText2"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--/>-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/status_text"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/statusText"
+                    android:text="Status: "
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+                <TextView
+                    android:id="@+id/apptStatusText"
+                    android:textColor="@color/orange"
+                    android:layout_toRightOf="@+id/statusText"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    />
+            </RelativeLayout>
+
+
+            <TextView
+                    android:id="@+id/endDate"
+                    android:textColor="@color/orange"
+                    android:text="12th Mar 2018 4:00pm"
+                    android:textStyle="italic"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/lnLayout">
+
+
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/reactionView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            app:icon="@mipmap/ic_status"
+            app:iconSize="30dp"
+            app:iconGravity="textStart"
+            app:rippleColor="@color/cardview_shadow_start_color"
+            app:iconTint="@color/cardview_dark_background"
+            android:textColor="@color/lightText2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="Change Status"/>
+
+        <android.support.design.button.MaterialButton
+            android:id="@+id/commentsView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            app:rippleColor="@color/cardview_shadow_start_color"
+            style="@style/Widget.MaterialComponents.Button.TextButton.Icon"
+            app:icon="@mipmap/ic_comment"
+            app:iconSize="30dp"
+            app:iconTint="@color/cardview_dark_background"
+            app:iconGravity="textStart"
+            android:textColor="@color/lightText2"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:text="Comments"/>
+
+
+    </LinearLayout>
+</RelativeLayout>
