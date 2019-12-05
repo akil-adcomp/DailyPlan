@@ -119,11 +119,11 @@ public class MainActivity extends AppCompatActivity
         userSelect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (drawer.isDrawerOpen(Gravity.RIGHT)) {
-                    drawer.closeDrawer(Gravity.RIGHT);
+                if (drawer.isDrawerOpen(Gravity.END)) {
+                    drawer.closeDrawer(Gravity.END);
                 } else {
                     floatingSearch.detachNavigationDrawerFromMenuButton(drawer);
-                    drawer.openDrawer(Gravity.RIGHT);
+                    drawer.openDrawer(Gravity.END);
                 }
             }
         });

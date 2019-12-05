@@ -22,7 +22,6 @@
                 android:layout_weight="0.2"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                android:layout_gravity="top"
                 android:background="@color/transparent"
                 android:visibility="visible"
                 app:floatingSearch_close_search_on_keyboard_dismiss="true"
